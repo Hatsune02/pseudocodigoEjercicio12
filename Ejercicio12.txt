@@ -1,0 +1,37 @@
+Algoritmo Ejercicio12
+	altura <- 0
+	edad <- 0
+	sexo <- ''
+	cantidadEdad <- 0
+	cantidadAlturaM <- 0
+	cantidadAlturaF <- 0
+	sumaAM <- 0
+	sumaAF <- 0
+	sumaE <- 0
+	Repetir
+		Escribir ''
+		Leer altura
+		Si (altura>=0) Entonces
+			Escribir ''
+			Leer edad
+			Escribir ''
+			Leer sexo
+			Si (sexo='M') Entonces
+				sumaAM <- sumaAM+altura
+				cantidadAlturaM <- cantidadAlturaM+1
+			FinSi
+			Si (sexo='F') Entonces
+				sumaAF <- sumaAF+altura
+				cantidadAlturaF <- cantidadAlturaF+1
+			FinSi
+			sumaE <- sumaE+edad
+			cantidadEdad <- cantidadEdad+1
+		FinSi
+	Hasta Que (altura<0)
+	promedioAF <- sumaAF/cantidadAlturaF
+	promedioAM <- sumaAM/cantidadAlturaM
+	promedioEdad <- sumaE/cantidadEdad
+	Escribir 'Promedio de altura de las mujeres ',promedioAF
+	Escribir 'Promedio de altura de los varones ',promedioAM
+	Escribir 'Promedio de edad de los participantes ',promedioEdad
+FinAlgoritmo
